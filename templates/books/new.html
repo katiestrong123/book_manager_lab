@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- action is where the route handles the data  -->
+<form action="/books" method="post">
+    <!-- form: ipout for title -->
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" 
+            name="title" 
+            id="title" 
+            placeholder= "Title"
+            required
+            autofocus>
+    </div>
+    <div>
+        <label for="genre">Genre: </label>
+        <input type="text"
+               name="genre"
+               id="genre"
+               placeholder="Genre"
+               required
+               autofocus>
+    </div>
+      <!-- form: input for author name -->
+    <div>
+        <label for="author">Author: </label>
+        <input type="text"
+               name="author"
+               id="author"
+               placeholder="Author"
+               required
+               autofocus>
+    </div>
+    <!-- form: input for publisher name -->
+    <div>
+        <label for="publisher">Publisher:</label>
+        <input type="text"
+               name="publisher"
+               id="publisher"
+               placeholder="Publisher"
+               required
+               autofocus>
+    </div>
+    <button type="submit">Add Book</button>
+
+</form>
+
+{% endblock %}

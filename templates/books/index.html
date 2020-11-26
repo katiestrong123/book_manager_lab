@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for book in all_books %}
+   
+<div class="book_title" >
+        {{ book.title }}
+        <span> is a {{ book.genre }}, </span> 
+        <span>written by {{ book.author.first_name }}</span>
+        {{ book.author.last_name }}
+        <span>and published by {{ book.publisher }}</span> 
+       
+    </div>
+    
+    <form action="/book/{{book.id}}/delete" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+{% endfor %}
+
+{% endblock %}
